@@ -1,0 +1,23 @@
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        char str[] = s.toCharArray();
+        int f1=0,f2=0,count=0;
+        boolean found;
+        while(f2<str.length)
+        {
+            found = false;
+            for(int i=f1;!found&i<f2;i++)
+            {
+                if(str[i]==str[f2])
+                {
+                    found = true;
+                    f1 = i+1;
+                }
+            }
+            f2++;
+            count = Math.max(count,f2-f1);
+        }
+        return count;
+        
+    }
+}
