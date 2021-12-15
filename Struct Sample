@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+
+struct Person{
+char name[50];
+int cityno;
+float salary;
+}p1;
+
+int main(){
+    char str[50];
+    printf("Enter your Name\n");
+    scanf("%s",str);
+    int cno;
+    float sal;
+    printf("Enter your Roll No and Salary\n");
+    scanf("%d\n %f",&cno,&sal);
+    strcpy(p1.name,str);
+    p1.cityno = cno;
+    p1.salary = sal;
+    printf("\n-----------------\n");
+    printf("Welcome %s\n",p1.name);
+    printf("Your Roll No is %d\n",p1.cityno);
+    printf("Your Salary is %.2f",p1.salary);
+}
+
