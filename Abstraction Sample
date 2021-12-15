@@ -1,0 +1,30 @@
+abstract class t1
+{
+    abstract int test();
+}
+class t2 extends t1
+{
+    int test(){
+        System.out.println("Modify 1");
+        return 1;
+        
+    }
+}
+class t3 extends t2{
+    int test(){
+        System.out.println();
+        System.out.println("Modify 2");
+        return 2;
+       
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    t1 tobj;
+	    tobj = new t2();
+	    System.out.print(tobj.test());
+	    tobj = new t3();
+	    System.out.print(tobj.test());
+	}
+}
